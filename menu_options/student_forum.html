@@ -3,7 +3,45 @@
     <head>
         <meta charset="UTF-8">
         <title>STUDENT FORUM</title>
-        <link rel="stylesheet" href="./css/grid.css">
+        <style>
+            .wrapper {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            position: fixed;
+            grid-template-areas: "header header"
+                                 "main right"
+                                 "footer footer";
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            background-color: #90e0ef;
+        }
+        .header {
+            background: #90e0ef;
+            grid-area: header;
+        }
+        .content1 {
+            background: #90e0ef;
+            grid-area: main;
+        }
+        .content2 {
+            background: #90e0ef;
+            grid-area: right;
+        }
+        .footer {
+            background: #90e0ef;
+            grid-area: footer;
+        }
+        .cell {
+            color: #03045e;
+            font-size: 24px;
+            text-align: center;
+            padding: 4px;
+        }
+        </style>
     </head>
     <body>
     <div class="wrapper">
@@ -14,7 +52,7 @@
             <p>NEWS UPDATES REGARDING COLLEGE</p>
             <p>Students have access to put up information</p>
         </div>
-        <div class="content2"> </div>
+        <div class="cell content2"> Latest forums created by time. </div>
     <div class="cell footer">Created by christina and areesha</div>
     </div>
 </body>

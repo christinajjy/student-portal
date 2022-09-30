@@ -8,38 +8,89 @@
             display: inline-block;
             margin-left: 50px;
         }
+        .wrapper {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            position: fixed;
+            grid-template-areas: "header header"
+                                "top top"
+                                "bottom bottom"
+                                "footer footer";
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            background-color: #90e0ef;
+        }
+        .header {
+            background: #90e0ef;
+            grid-area: header;
+        }
+        .content3 {
+            background: #90e0ef;
+            grid-area: top;
+            text-align: left;
+            color: #03045e;
+        }
+        .content4 {
+            background: #90e0ef;
+            grid-area: bottom;
+        }
+        .footer {
+            background: #90e0ef;
+            grid-area: footer;
+        }
+        .cell {
+            color: #03045e;
+            font-size: 24px;
+            text-align: center;
+            padding: 4px;
+        }
         </style>
     </head>
     <body>
-       <h2>Academic Performance</h2>
-        <p >Name:      <span class="tab"></span>   Roll no.:</p> 
-        <p>Academic year:2021-2025</p>
-        <p>Result of:</p>
-        <table border="1px">
-            <tr>
-                <th>S.no</th>
-                <th width="500px">Subject</th>
-                <th>Grade</th>
-            </tr>
-            <tr>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-        </table>
-        <fieldset>
-            <legend>Overall</legend>
-            <p>SGPA:0.0 <span class="tab"></span> CGPA:0.0</p>
-        </fieldset>
+        <div class="wrapper">
+            <div class="cell header">
+                <h2>Academic Performance</h2>
+            </div>
+            <div class="content3">
+                <p >Name:      <span class="tab"></span>   Roll no.:</p> 
+                <p>Academic year: 2021-2025</p>
+                <p>Result of:</p>
+                <table border="1px">
+                    <tr>
+                        <th>S.no</th>
+                        <th width="500px">Subject</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </table>
+                </div>
+                <div class="cell content4">
+                <fieldset>
+                    <legend>Overall</legend>
+                    <p>SGPA:0.0 <span class="tab"></span> CGPA:0.0</p>
+                </fieldset>
+            </div>
+            <div class="cell footer">
+                Created by Christina & Areesha
+            </div>
+        </div>
     </body>
 </html>

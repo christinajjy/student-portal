@@ -2,46 +2,99 @@
 <html lang=""en>
     <head>
         <meta charset="UTF-8">
-        <title>List of Assignments</title>
+        <title>Assignments</title>
         <style>
          table, th, td {
-            border: 1px solid black;
+            border: 1px solid #03045e;
          }
+         .wrapper {
+            display: grid;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            position: fixed;
+            grid-template-areas: "header header"
+                                "top top"
+                                "bottom bottom"
+                                "footer footer";
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            background-color: #90e0ef;
+        }
+        .header {
+            background: #90e0ef;
+            grid-area: header;
+        }
+        .content3 {
+            background: #90e0ef;
+            grid-area: top;
+        }
+        .content4 {
+            background: #90e0ef;
+            grid-area: bottom;
+        }
+        .footer {
+            background: #90e0ef;
+            grid-area: footer;
+            font-size: 16px;
+            text-align: center;
+            color: #03045e;
+        }
+        .cell {
+            color: #03045e;
+            font-size: 24px;
+            text-align: center;
+            padding: 4px;
+        }
         </style>
     </head>
     <body>
-        <h1>List of Assignments</h1>
-        <table>
-            <tr>
-                <td width="500px">Assignment</td>
-                <td width="200px">Subject</td>
-                <td>Due Date</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-            <tr>
-                <td>.</td>
-                <td>.</td>
-                <td>.</td>
-            </tr>
-        </table>
+        <div class="wrapper">
+            <div class="cell header">
+                <h1>List of Assignments</h1>
+            </div>
+            <div class="cell content3">
+                <table>
+                    <tr>
+                        <td width="500px">Assignment</td>
+                        <td width="200px">Subject</td>
+                        <td>Due Date</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                    </tr>
+                    <tr>
+                        <td>.</td>
+                        <td>.</td>
+                        <td>.</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cell content4"> 
+                Kindly complete your assignments on time!
+            </div>
+            <div class="footer">
+                Created by Christina & Areesha
+            </div>
+        </div>
     </body>
 </html>
