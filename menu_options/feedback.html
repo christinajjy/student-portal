@@ -6,33 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .wrapper{
-            display: grid;
-            grid-template-rows: 1fr 4fr 1fr;
-        }
-        .wrapper > div{
-            
-            padding: 1em;
-            text-align: center;
-        }
-        .header{
-            
-        }
-        .content{
-            
-        }
-        .footer{
-            
-        }
+            .wrapper{
+                display: grid;
+                grid-template-columns:50% 50%;
+                grid-template-rows: 1fr 6fr 1fr;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                z-index: 10;
+            }
+            .header{
+                grid-column: 1 /span 2;
+                grid-row: 1/span 1;
+                background-color:#90e0ef;
+            }
+            h1,h2{
+                text-align: center;
+            }
+            .content{
+                grid-row: 2/span 6;
+                grid-column: 1/span 2;
+                background-color:#90e0ef;
+            }
+            .footer{
+                grid-column: 1 /span 2;
+                background-color: #90e0ef;
+                grid-row: 8/ span 1;
+            }
+            form{
+                text-align: center;
+                margin-top: 200px;
+            }
 
     </style>
 </head>
 <body>
     <div class="wrapper">
 
-        <div class="header"><h1>FEEDBACK</h1></div>
+        <div class="header"><h1>FEEDBACK</h1><hr></div>
         <div class="content">
-            <form action="">
+            <form action="feedback">
     
             <label for="fname">Faculty name:</label>
             <input type="text" id="fname" name="fname"><br><br>
@@ -43,9 +58,10 @@
     
             <input type="submit" value="Submit">
         </form>
+        <hr>
         </div>
         <div class="footer">
-        
+        <hr>
             <p>
                 <ul>
                     <li>we can send the feedback to the faculty mails/ student-forum page pm</li>
