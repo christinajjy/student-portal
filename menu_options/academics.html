@@ -16,43 +16,39 @@
             top: 0;
             z-index: 10;
             position: fixed;
-            grid-template-areas: "header header"
-                                "top top"
-                                "bottom bottom"
-                                "footer footer";
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 6fr 1fr;
+            grid-template-columns:50% 50%;
             background-color: #90e0ef;
         }
         .header {
             background: #90e0ef;
-            grid-area: header;
+            grid-column: 1 /span 2;
+            grid-row: 1/span 1;
         }
         .content3 {
-            background: #90e0ef;
-            grid-area: top;
+            grid-column: 1 /span 2;
+            background-color: #90e0ef;
+            grid-row: 2/span 3;
             text-align: left;
             color: #03045e;
         }
         .content4 {
-            background: #90e0ef;
-            grid-area: bottom;
+            grid-column: 1 /span 2;
+            background-color:#90e0ef;
+            grid-row: 5/span 3;
         }
         .footer {
-            background: #90e0ef;
-            grid-area: footer;
+            
+            grid-column: 1 /span 2;
+            background-color: #90e0ef;
+            grid-row: 8/ span 1;
         }
-        .cell {
-            color: #03045e;
-            font-size: 24px;
-            text-align: center;
-            padding: 4px;
-        }
+        
         </style>
     </head>
     <body>
         <div class="wrapper">
-            <div class="cell header">
+            <div class="header">
                 <h2>Academic Performance</h2>
             </div>
             <div class="content3">
@@ -82,13 +78,13 @@
                     </tr>
                 </table>
                 </div>
-                <div class="cell content4">
+                <div class="content4">
                 <fieldset>
                     <legend>Overall</legend>
                     <p>SGPA:0.0 <span class="tab"></span> CGPA:0.0</p>
                 </fieldset>
             </div>
-            <div class="cell footer">
+            <div class="footer">
                 Created by Christina & Areesha
             </div>
         </div>

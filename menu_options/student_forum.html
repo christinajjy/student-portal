@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>STUDENT FORUM</title>
         <style>
-            .wrapper {
+        .wrapper {
             display: grid;
             height: 100%;
             width: 100%;
@@ -12,48 +12,47 @@
             top: 0;
             z-index: 10;
             position: fixed;
-            grid-template-areas: "header header"
-                                 "main right"
-                                 "footer footer";
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 6fr 1fr;
+            grid-template-columns: 50% 50%;
             background-color: #90e0ef;
+        }
+        h1,h2{
+            text-align: center;
         }
         .header {
             background: #90e0ef;
-            grid-area: header;
+            grid-row: 1/span 1;
+            grid-column: 1/ span 2;
         }
         .content1 {
             background: #90e0ef;
-            grid-area: main;
+            grid-row: 2/span 6;
+            grid-column: 1/span 1;
         }
         .content2 {
             background: #90e0ef;
-            grid-area: right;
+            grid-row: 2/span 6;
+            grid-column: 2/span 2;
         }
         .footer {
             background: #90e0ef;
-            grid-area: footer;
+            grid-row: 8/span 1;
+            grid-column: 1/span 2;
         }
-        .cell {
-            color: #03045e;
-            font-size: 24px;
-            text-align: center;
-            padding: 4px;
-        }
+        
         </style>
     </head>
     <body>
     <div class="wrapper">
-       <div class="cell header">
+       <div class="header">
             <h1>STUDENT FORUM</h1>
        </div>
-        <div class="cell content1">
+        <div class="content1">
             <p>NEWS UPDATES REGARDING COLLEGE</p>
             <p>Students have access to put up information</p>
         </div>
-        <div class="cell content2"> Latest forums created by time. </div>
-    <div class="cell footer">Created by christina and areesha</div>
+        <div class="content2"> Latest forums created by time. </div>
+    <div class="footer">Created by christina and areesha</div>
     </div>
 </body>
 </html>
